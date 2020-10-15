@@ -2,14 +2,15 @@ import React from 'react';
 import {Link, Route} from 'react-router-dom';
 import routesConfig from './routesConfig';
 import './App.css';
+import Footer from './pages/footer/footer';
 
 function App() {
   return (
-    <div className="App">
-      <header>
-        <nav>
+    <div>
+      <header className="py-3 header">
+        <nav className="nav-links">
           <Link to="/">Home</Link>
-          <Link className="px-2" to="/user">User</Link>
+          <Link className="px-3" to="/user">User</Link>
           <Link to="/login">Login</Link>
         </nav>
       </header>
@@ -19,6 +20,7 @@ function App() {
           ></Route>
         }
       )}
+      <Footer></Footer>
     </div>
   );
 }
